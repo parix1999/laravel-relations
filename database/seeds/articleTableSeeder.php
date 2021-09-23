@@ -35,16 +35,16 @@ class articleTableSeeder extends Seeder
             $authorObject->name = $author;
             // $randSurnameKey = array_rand($authorSurnameList, 1);
             // $randSurname = $authorSurnameList[$randSurnameKey];
-            $authorObject->surname = $faker->name(1);
+            $authorObject->surname = $faker->word();
             $authorObject->email = $faker->email();
             $authorObject->birth_year = $faker->year();
 
-            $arrayIdAuthor[] = $authorObject->id; 
             $authorObject->save();
+            $arrayIdAuthor[] = $authorObject->id; 
             
         }
 
-        for($i = 0; $i < 10; $i++) {
+        for($i = 0; $i < 15; $i++) {
             // Creazione dell'oggetto:
             $articleObject = new article();
             $articleObject->title = $faker->words(5, true);
