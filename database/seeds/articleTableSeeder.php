@@ -56,6 +56,8 @@ class articleTableSeeder extends Seeder
             $articleObject->descrizione = $faker->paragraph(3);
             $articleObject->cover = $faker->imageUrl(400, 400, 'article', true);
             
+            $articleObject->created_at = null;
+            $articleObject->updated_at = null;
             $articleObject->save();
         }
 
