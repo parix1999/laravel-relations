@@ -43,18 +43,18 @@ class articleTableSeeder extends Seeder
             $authorObject->save();
             
         }
-         
+
         for($i = 0; $i < 10; $i++) {
             // Creazione dell'oggetto:
             $articleObject = new article();
-            $articleObject->title = $faker->words(5);
+            $articleObject->title = $faker->words(5, true);
 
             $randIdKey = array_rand($arrayIdAuthor, 1);
             $randId = $arrayIdAuthor[$randIdKey];
             $articleObject->author_id = $randId; 
         
             $articleObject->descrizione = $faker->paragraph(3);
-            $articleObject->cover =  $faker->imageUrl(400, 400, 'article', true);
+            $articleObject->cover = $faker->imageUrl(400, 400, 'article', true);
             
             $articleObject->save();
         }
