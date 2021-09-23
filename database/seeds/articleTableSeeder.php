@@ -11,6 +11,28 @@ class articleTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // Author:
+        $authorNameList = [
+            'Gino',
+            'Pino',
+            'Gianni',
+            'Pietro',
+            'Gianpaolo',
+            'Vercingitore'
+        ];
+        $authorSurnameList = [
+            'Paoli',
+            'Acquafresca',
+            'Salvio',
+            'Tornaindietro',
+            'Lucio',
+            'Dallio'
+        ];
+
+        $listAuthorId = [];
+        
+
+
+
     }
 }
