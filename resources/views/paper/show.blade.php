@@ -10,7 +10,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>L'articolo di ...</h1>
+        <h1>L'articolo di </h1>
+        @foreach($article->author as $autore)
+            {{ $autore->id }}
+        @endforeach
+       
         <div class="row">
             <div class="space col-3">
                 <div class="card">

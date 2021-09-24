@@ -52,6 +52,7 @@ class BackOfficeController extends Controller
     public function show(article $article)
     {
         //passo i dati:
+        //dd($article);
         return view('paper.show', compact('article'));
     }
 
