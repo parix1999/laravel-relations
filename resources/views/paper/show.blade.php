@@ -17,7 +17,7 @@
                 <div class="titleshow">
                     <strong>{{ $article->title }}</strong>
                 </div>
-                <div class="image">
+                <div class="image-show">
                     <img src="{{ $article->cover }}" alt="articolo {{ $article->title }}">
                 </div>
                 <div class="testo-articolo">
