@@ -53,7 +53,8 @@ class articleTableSeeder extends Seeder
             $randId = $arrayIdAuthor[$randIdKey];
             $articleObject->author_id = $randId; 
         
-            $articleObject->descrizione = $faker->paragraph(3);
+            $articleObject->descrizione = $faker->paragraph(2);
+            $articleObject->testo = $faker->text(600);
             $articleObject->cover = $faker->imageUrl(400, 400, 'article', true);
             
             $articleObject->created_at = null;

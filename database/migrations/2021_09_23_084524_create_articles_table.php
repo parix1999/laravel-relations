@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
             $table->unsignedBigInteger('author_id');
             $table->foreign('author_id')->references('id')->on('authors');
             $table->text('descrizione');
+            $table->text('testo');
             $table->text('cover');
             $table->timestamps();
         });
