@@ -16,8 +16,9 @@ class BackOfficeController extends Controller
      */
     public function index()
     {
-        // 
-        echo 'ciao';
+        // passo i dati:
+        $allArticles = article::all();
+        return view('paper.index', compact('allArticles'));
     }
 
     /**
@@ -28,6 +29,7 @@ class BackOfficeController extends Controller
     public function create()
     {
         //
+        echo 'sono la create';
     }
 
     /**

@@ -1,0 +1,22 @@
+.space {
+    margin-top:24px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+    .title{
+        height:30px;
+    
+    }
+}
+
+.image {
+    width:150px;
+    img {
+        width: 100%;
+    }
+}
