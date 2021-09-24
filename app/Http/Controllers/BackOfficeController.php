@@ -29,7 +29,7 @@ class BackOfficeController extends Controller
     public function create()
     {
         //
-        echo 'sono la create';
+
     }
 
     /**
@@ -49,9 +49,10 @@ class BackOfficeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(article $article)
     {
-        //
+        //passo i dati:
+        return view('paper.show', compact('article'));
     }
 
     /**

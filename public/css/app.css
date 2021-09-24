@@ -9,11 +9,15 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .card .title {
   height: 30px;
+}
+
+.card a button {
+  margin-top: 20px;
 }
 
 .image {

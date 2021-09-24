@@ -13,19 +13,22 @@
         <h1>Tutti i nostri articoli</h1>
         <div class="row">
             @foreach($allArticles as $article)
-            <div class="space col-3">
-                <div class="card">
-                    <div class="title">
-                        {{ $article->title }}
-                    </div>
-                    <div class="image">
-                        <img src="{{ $article->cover }}" alt="articolo {{ $article->title }}">
+                <div class="space col-3">
+                    <div class="card">
+                        <div class="title">
+                            {{ $article->title }}
+                        </div>
+                        <div class="image">
+                            <img src="{{ $article->cover }}" alt="articolo {{ $article->title }}">
+                        </div>
+                        
+                        <a href="{{ route('articles.show', $article) }}">
+                            <button type="button" class="btn btn-primary">Mostra</button>
+                        </a>                  
                     </div>
                 </div>
-            </div>
             @endforeach
         </div>
-
     </div>
 </body>
 </html>
