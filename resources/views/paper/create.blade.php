@@ -47,7 +47,7 @@
 
         <div class="form-group">
             <div class="div">Testo</div>
-            <textarea name="exampleInputPassword1" name="testo" id="teso" cols="136" rows="10" placeholder="Inserisci qui il testo del tuo articolo..."></textarea>
+            <textarea name="testo" id="testo" cols="136" rows="10" placeholder="Inserisci qui il testo del tuo articolo..."></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

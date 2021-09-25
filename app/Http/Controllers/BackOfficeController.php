@@ -43,8 +43,15 @@ class BackOfficeController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request);
+        // Creazione dei nuovi oggetti:
+        $article = new article();
+        $author = new author(); 
+
+        // Funzione per il salvataggio dei dati:
+        $this->saveItemFromRequest($article, $author, $request);
+        
+        return redirect()->route('articles.show', $article);
+
     }
 
     /**
@@ -93,4 +100,27 @@ class BackOfficeController extends Controller
     {
         //
     }
+
+    // Funzione per il salvataggio dati(oggetti):
+    private function saveItemFromRequest(article $article, author $author, Request $request) {
+        $data = $request->all(); // è un'array;
+
+        $author->name = $data['name'];
+        $author->surname = $data['surname'];
+        $author->email = $data['email'];
+        $author->birth_year = $data['birth_year'];
+        $author->save();
+
+        $article->title = $data['title'];
+        $article->author_id = $author->id; // Li passo l'id del nuovo autore creato;
+        $article->descrizione = $data['descrizione'];
+        $article->testo = $data['testo'];
+        $article->cover = $data['cover'];
+        $article->save();
+        
+        
+        
+
+    }
+
 }
