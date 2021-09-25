@@ -25,9 +25,14 @@
                 </div>
 
                 <div class="specifiche">
-                    <div class="data">Dati autore:</div>
-                    <div class="age"><strong>Nato il</strong> {{ $article->author->birth_year }}</div>
-                    <div class="email"><strong>email:</strong> {{ $article->author->email }}</div>
+                    <div class="uno">
+                        <div class="data">Dati autore:</div>
+                        <div class="age"><strong>Nato il</strong> {{ $article->author->birth_year }}</div>
+                        <div class="email"><strong>email:</strong> {{ $article->author->email }}</div>
+                    </div>
+                    <div class="due">
+                        <a href="{{ route('articles.index') }}">Torna a tutti gli aricoli</a>
+                    </div>
                 </div>
             </div>
             

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Tutti i nostri articoli</h1>
+        <h1>Anteprima di tutti i nostri articoli</h1>
         <div class="row">
             @foreach($allArticles as $article)
                 <div class="space col-3">

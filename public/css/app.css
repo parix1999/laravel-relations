@@ -57,6 +57,12 @@
   margin-top: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.specifiche .uno {
+  display: flex;
+  align-items: center;
 }
 
 .specifiche .data {

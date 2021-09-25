@@ -19,6 +19,11 @@
     margin-top:20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    .uno {
+        display: flex;
+        align-items: center;
+    }
     .data {
         font-size: 18px;
         font-weight: bold;
