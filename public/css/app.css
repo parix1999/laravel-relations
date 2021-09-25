@@ -53,6 +53,27 @@
   margin-top: 20px;
 }
 
+.specifiche {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.specifiche .data {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.specifiche .age {
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+.specifiche .email {
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
