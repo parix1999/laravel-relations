@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('/data', 'DataAuthor@data');
+
 Route::resource('articles', BackOfficeController::class);

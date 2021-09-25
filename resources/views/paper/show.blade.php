@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Articolo di  {{ $article->author->name }}  {{ $article->author->surname }} </h1>   
+        <h1>Articolo di {{ $article->author->name }}  {{ $article->author->surname }}</h1>   
         <div class="row">
             <div class="space col-12">
     
@@ -23,8 +23,14 @@
                 <div class="testo-articolo">
                     {{ $article->testo }}
                 </div>
-                
+
+                <div class="specifiche">
+                    <div class="data">Dati autore:</div>
+                    <div class="age"><strong>Nato il</strong> {{ $article->author->birth_year }}</div>
+                    <div class="email"><strong>email:</strong> {{ $article->author->email }}</div>
+                </div>
             </div>
+            
         </div>
     </div>
 </body>

@@ -15,3 +15,20 @@
     margin-top: 20px;
 }
 
+.specifiche {
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    .data {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .age {
+        font-weight: lighter;
+        margin-left:10px;
+    }
+    .email {
+        font-weight: lighter;
+        margin-left:10px;
+    }
+}
