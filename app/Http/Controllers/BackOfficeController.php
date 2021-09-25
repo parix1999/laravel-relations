@@ -28,7 +28,10 @@ class BackOfficeController extends Controller
      */
     public function create()
     {
-        //
+        // Rotta per il file php(form) della create:
+        $allArticles = article::all();
+        $allAuthors = author::all();
+        return view('paper.create', compact('allArticles', 'allAuthors'));
 
     }
 
@@ -41,6 +44,7 @@ class BackOfficeController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request);
     }
 
     /**
