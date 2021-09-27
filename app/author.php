@@ -10,4 +10,5 @@ class author extends Model
     public function article() {
         return $this->hasMany(article::class);
     }
+
 }
