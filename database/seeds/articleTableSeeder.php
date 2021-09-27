@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 // Importare i due model:
 use App\article; 
 use App\author;
+use App\tag;
 // Per il faker:
 use Faker\Generator as Faker;
 
@@ -43,6 +44,28 @@ class articleTableSeeder extends Seeder
             $arrayIdAuthor[] = $authorObject->id; 
             
         }
+        // Per la tabella many to many:
+        $tagsList = [
+            'Sport',
+            'Cinema',
+            'Giochi',
+            'News',
+            'Esteri',
+            'Politica',
+            'Vip',
+            'Social'
+        ];
+
+        $tagsIdList = []; // 1, 2, 3, 4, 5, 6, 7, 8
+        foreach($tagsList as $tag) {
+            $tagObject = new tag();
+            $tagObject->name = $tag; 
+            $tagObject->save();
+
+            $tagsIdList[] = $authorObject->id;
+        }
+
+
 
         for($i = 0; $i < 15; $i++) {
             // Creazione dell'oggetto:
