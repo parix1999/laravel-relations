@@ -32,10 +32,11 @@
         </div>
 
         <h1>Altrimenti selezionane uno esistente:</h1>
+        <!-- Eventualmente toDo  -->
         <div class="form-group">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label class="input-group-text" for="category_id">Options</label>
+                    <label class="input-group-text" for="author_id">Options</label>
                 </div>
                 <select class="custom-select" id="author_id" name="author_id">
                     <option selected>Choose...</option>

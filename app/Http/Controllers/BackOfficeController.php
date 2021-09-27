@@ -47,10 +47,11 @@ class BackOfficeController extends Controller
         // Creazione dei nuovi oggetti:
         $article = new article();
         $author = new author(); 
+        
 
         // Funzione per il salvataggio dei dati:
         $this->saveItemFromRequest($article, $author, $request);
-        
+
         return redirect()->route('articles.show', $article);
 
     }
@@ -105,7 +106,7 @@ class BackOfficeController extends Controller
     // Funzione per il salvataggio dati(oggetti):
     private function saveItemFromRequest(article $article, author $author, Request $request) {
         $data = $request->all(); // è un'array;
-
+         
         $author->name = $data['name'];
         $author->surname = $data['surname'];
         $author->email = $data['email'];
