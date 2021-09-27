@@ -31,17 +31,20 @@
             <input type="number" class="form-control" name="birth_year" id="birth_year" max="2004" min="1900">
         </div>
 
-        <!-- <h2>Altrimenti selezionane uno esistente:</h2>
+        <h1>Altrimenti selezionane uno esistente:</h1>
         <div class="form-group">
-            <label for="exampleFormControlSelect2">Example multiple select</label>
-            <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            </select>
-        </div> -->
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="category_id">Options</label>
+                </div>
+                <select class="custom-select" id="author_id" name="author_id">
+                    <option selected>Choose...</option>
+                    @foreach($allAuthors as $author)
+                        <option value="{{$author->id}}">{{ $author->name }} {{ $author->surname }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
 
         <h1>Creazione Articolo:</h1>
         <div class="form-group">

@@ -31,6 +31,7 @@ class BackOfficeController extends Controller
         // Rotta per il file php(form) della create:
         $allArticles = article::all();
         $allAuthors = author::all();
+    
         return view('paper.create', compact('allArticles', 'allAuthors'));
 
     }
