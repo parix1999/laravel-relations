@@ -12,7 +12,7 @@
     <div class="container">
     <form action="{{ route('articles.store') }}" method="POST">
         @csrf
-        <h1>Dati Autore:</h1>
+        <h1>Dati Autore se nuovo autore:</h1>
         <div class="form-group">
             <label for="email">Email address</label>
             <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
@@ -30,6 +30,18 @@
             <label for="birth_year">Anno di nascita</label>
             <input type="number" class="form-control" name="birth_year" id="birth_year" max="2004" min="1900">
         </div>
+
+        <!-- <h2>Altrimenti selezionane uno esistente:</h2>
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Example multiple select</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            </select>
+        </div> -->
 
         <h1>Creazione Articolo:</h1>
         <div class="form-group">
