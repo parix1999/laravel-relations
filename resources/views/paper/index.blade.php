@@ -10,10 +10,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Anteprima di tutti i nostri articoli</h1>
+        <div class="top">
+            <h1>Anteprima di tutti i nostri articoli</h1>
+            <div>
+                <a href="{{ route('articles.create') }}">
+                    <button type="button" class="btn btn-outline-success">Crea un nuovo articolo</button>
+                </a>
+            </div>
+        </div>
         <div class="row">
             @foreach($allArticles as $article)
-                <div class="space col-3">
+                <div class="space col-6 col-xs-6 col-sm-4 col-mg-3 col-lg-3">
                     <div class="card">
                         <div class="title">
                             <strong>{{ $article->title }}</strong>
