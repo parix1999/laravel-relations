@@ -58,10 +58,10 @@ class articleTableSeeder extends Seeder
 
         $tagsIdList = []; // 1, 2, 3, 4, 5, 6, 7, 8
         foreach($tagsList as $tag) {
+            // Oggetto tag
             $tagObject = new tag();
             $tagObject->name = $tag; 
             $tagObject->save();
-
             $tagsIdList[] = $authorObject->id;
         }
 
@@ -69,6 +69,7 @@ class articleTableSeeder extends Seeder
 
         for($i = 0; $i < 15; $i++) {
             // Creazione dell'oggetto:
+            // Oggetto article:
             $articleObject = new article();
             $articleObject->title = $faker->words(5, true);
 
@@ -82,7 +83,13 @@ class articleTableSeeder extends Seeder
             
             $articleObject->created_at = null;
             $articleObject->updated_at = null;
+
+            // Qui ora va l'id del many to many: 
+            $tagKey = array_rand($tagsIdList, 1);
+            $tagIdRand = $tagsIdList[$tagKey];
             $articleObject->save();
+
+            $articleObject->tag()->attach($tagIdRand);
         }
 
         
